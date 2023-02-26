@@ -87,6 +87,8 @@ router.post("/login", async (req, res) => {
       expires: new Date(Date.now() + 2589200000),
       httpOnly: true,
       domain: ".mern-stack-f0rk.onrender.com",
+      sameSite: "none",
+      secure: true,
     });
     res.status(201).json({ message: "Login Successful", userData });
   } catch (error) {
