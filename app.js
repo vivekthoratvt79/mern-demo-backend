@@ -2,9 +2,13 @@ const express = require("express");
 const dotenv = require("dotenv");
 const app = express();
 var cookies = require("cookie-parser");
+const cors = require("cors");
 
 dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 3080;
+
+//To enable CORS
+app.use(cors({ origin: "https://mern-stack-demo.onrender.com/" }));
 
 //Mongodb connection
 require("./db/conn");
