@@ -86,7 +86,7 @@ router.post("/login", async (req, res) => {
     res.cookie("jwtoken", token, {
       expires: new Date(Date.now() + 2589200000),
       httpOnly: true,
-      domain: "mern-stack-demo.onrender.com/",
+      sameSite: "Lax",
     });
     res.status(201).json({ message: "Login Successful", userData });
   } catch (error) {
