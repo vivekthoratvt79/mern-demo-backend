@@ -8,7 +8,7 @@ dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 3080;
 
 //To enable CORS
-app.use(cors({ origin: "https://mern-stack-demo.onrender.com/" }));
+app.use(cors({ origin: true }));
 
 //Mongodb connection
 require("./db/conn");
