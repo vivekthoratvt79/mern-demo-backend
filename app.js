@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookies());
 
 //Routes
-app.use(require("../server/router/auth"));
+app.use(require("./router/auth"));
 
 app.get("/", (req, res) => {
   res.send("Hello woorld");
