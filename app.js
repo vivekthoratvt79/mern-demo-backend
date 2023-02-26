@@ -7,7 +7,7 @@ dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 3080;
 
 //Mongodb connection
-require("../server/db/conn");
+require("./db/conn");
 
 //To read json responses
 app.use(express.json());
