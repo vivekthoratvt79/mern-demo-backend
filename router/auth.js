@@ -88,10 +88,6 @@ router.post("/login", async (req, res) => {
       httpOnly: true,
       domain: "https://mern-stack-demo.onrender.com/",
     });
-    res.set(
-      "Access-Control-Allow-Origin",
-      "https://mern-stack-f0rk.onrender.com/"
-    );
     res.status(201).json({ message: "Login Successful", userData });
   } catch (error) {
     console.log(error);

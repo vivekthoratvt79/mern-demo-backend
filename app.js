@@ -8,7 +8,7 @@ dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 3080;
 
 //To enable CORS
-app.use(cors({ origin: true }));
+app.use(cors({ origin: true, credentials: true }));
 
 //Mongodb connection
 require("./db/conn");
